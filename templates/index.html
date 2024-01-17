@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel in Tozeur</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {% if username %}{{ username }}{% else %}Guest{% endif %}!</h1>
+        <h2>Travel in Tozeur</h2>
+        <ul>
+            {% for offer in travel_offers %}
+                <li class="travel-offer">
+                    <img src="{{ url_for('static', filename=offer.image) }}" alt="{{ offer.destination }} Image">
+                    <div>
+                        <h2>{{ offer.destination }}</h2>
+                        <p>Price: {{ offer.price }}</p>
+                        <form action="{{ url_for('book') }}" method="post">
+                            <input type="hidden" name="client_name" value="{% if username %}{{ username }}{% else %}Guest{% endif %}">
+                            <input type="hidden" name="destination" value="{{ offer.destination }}">
+                            <input type="date" name="travel_date" required>
+                            <button type="submit">Book Now</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if username %}
+            <p><a href="{{ url_for('logout') }}">Logout</a></p>
+        {% else %}
+            <p><a href="{{ url_for('login') }}">Login</a> or <a href="{{ url_for('signup') }}">Signup</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
