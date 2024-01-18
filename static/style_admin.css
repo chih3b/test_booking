@@ -19,7 +19,7 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #007acc;
+    color: #2faf11;
 }
 
 table {
@@ -36,6 +36,6 @@ th, td {
 }
 
 th {
-    background-color: #007acc;
+    background-color: #2faf11;
     color: #fff;
 }

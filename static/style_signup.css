@@ -21,7 +21,7 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #007acc;
+    color: #2faf11;
 }
 
 form {
@@ -43,7 +43,7 @@ input {
 }
 
 button {
-    background-color: #007acc;
+    background-color: #2faf11;
     color: #fff;
     padding: 10px;
     border: none;
@@ -54,5 +54,5 @@ button {
 }
 
 button:hover {
-    background-color: #239ae3;
+    background-color: #3ce017;
 }

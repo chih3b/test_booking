@@ -10,7 +10,9 @@
 <body>
     <div class="container">
         <h1>Welcome, {% if username %}{{ username }}{% else %}Guest{% endif %}!</h1>
-        <h2>Travel in Tozeur</h2>
+        <div class="logo"> <h2>Travel in Tozeur</h2>
+        <img src="../static/palm.png"></div>
+
         <ul>
             {% for offer in travel_offers %}
                 <li class="travel-offer">

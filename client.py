@@ -61,7 +61,6 @@ def book():
         conn.commit()
         conn.close()
 
-        flash('Booking successful!')
         return redirect(url_for('index'))
 
 # Signup route
@@ -100,7 +99,6 @@ def login():
 
         if user and check_password_hash(user[2], password):
             session['username'] = user[1]
-            flash('Login successful!')
             return redirect(url_for('index'))
         else:
             flash('Invalid username or password. Please try again.')
@@ -111,7 +109,6 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('username', None)
-    flash('Logout successful!')
     return redirect(url_for('index'))
 
 if __name__ == '__main__':

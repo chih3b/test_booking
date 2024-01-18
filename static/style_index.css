@@ -12,11 +12,20 @@ body {
     text-align: center;
 
 }
+.logo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
 
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #007acc;
+    color: #2faf11;
 }
 
 h2 {
@@ -62,7 +71,7 @@ input[type="date"] {
 }
 
 button {
-    background-color: #007acc;
+    background-color: #2faf11;
     color: #fff;
     padding: 10px;
     border: none;
