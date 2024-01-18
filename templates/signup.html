@@ -10,15 +10,6 @@
 <body>
     <div class="container">
         <h1>Signup</h1>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                <ul>
-                    {% for message in messages %}
-                        <li>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        {% endwith %}
         <form action="{{ url_for('signup') }}" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
